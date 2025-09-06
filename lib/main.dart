@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 import 'home_screen.dart';
+import 'in_app_translation_screen.dart';
 import 'translation_screen.dart';
 
 void main() {
@@ -54,6 +55,10 @@ class _MyAppState extends State<MyApp> {
             final text = state.extra as String? ?? '';
             return TranslationScreen(initialText: text);
           },
+        ),
+        GoRoute(
+          path: '/in-app-translate',
+          builder: (context, state) => const InAppTranslationScreen(),
         ),
       ],
     );
